@@ -27,6 +27,12 @@
             line-height: 1.25em;
             font-size: 72px;
             color: white;
+            @media (max-width: 425px) {
+                font-size: 60px;
+            }
+            @media (max-width: 375px) {
+                font-size: 50px;
+            }
         }
         button {
             margin-left: 150px;
@@ -36,14 +42,30 @@
             color: rgb(41, 17, 63);
             font-size: 16px;
             cursor: pointer;
+            @media (max-width: 425px) {
+                margin-left: 100px;
+            }
+            @media (max-width: 375px) {
+                margin-left: 80px;
+            }
         }
     }
     .second {
         width: 100%;
-        height: 650px;
+        // min-height: 650px;
+        height: auto;
         background-color: rgb(58, 84, 253);
         padding: 130px 200px;
         box-sizing: border-box;
+        @media (max-width: 768px) {
+            padding: 130px 50px;
+        }
+        @media (max-width: 425px) {
+            padding: 130px 30px;
+        }
+        @media (max-width: 425px) {
+            padding: 130px 20px;
+        }
         h2 {
             margin-bottom: 50px;
             color: white;
@@ -67,11 +89,17 @@
     .third {
         box-sizing: border-box;
         width: 100%;
-        height: 2000px;
+        height: auto;
         padding: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media (max-width: 425px){
+            padding: 100px 30px;
+        }
+        @media (max-width: 320px){
+            padding: 100px 20px;
+        }
         &_top {
             width: 100%;
             height: 200px;
@@ -93,13 +121,20 @@
             width: 100%;
             height: auto;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 100px;
             &_left {
-                width: 50%;
-                height: 450px;
+                width: 500px;
+                min-height: 450px;
+                height: auto;
                 background-color: rgb(13, 7, 65);
                 display: flex;
                 flex-direction: column;
                 padding: 0 50px;
+                @media (max-width: 425px){
+                    padding: 0 15px;
+                }
                 box-sizing: border-box;
                 justify-content: center;
                 h2 {
@@ -113,8 +148,9 @@
                 }
             }
             &_right {
-                width: 50%;
-                height: 450px;
+                width: 500px;
+                min-height: 450px;
+                height: auto;
                 .firstp {
                     width: 100%;
                     height: 100%;
@@ -141,8 +177,15 @@
     }
     .fourth {
         width: 100%;
-        height: 1000px;
+        min-height: 550px;
+        height: auto;
         padding: 100px 150px;
+        @media (max-width: 600px){
+            padding: 100px 50px;
+        }
+        @media (max-width: 320px){
+            padding: 100px 20px;
+        }
         box-sizing: border-box;
         background-color: rgb(231, 237, 250);
         &_inner {
@@ -155,6 +198,7 @@
                 width: 100%;
                 display: flex;
                 align-items: center;
+                margin-bottom: 100px;
                 img {
                     border-radius: 50%;
                     margin-right: 50px;
@@ -168,6 +212,7 @@
                     p {
                         font-size: 17px;
                         color: rgb(13, 9, 73);
+                        margin-bottom: 5px;
                     }
                     span {
                         font-size: 19px;
@@ -181,20 +226,42 @@
         width: 100%;
         height: auto;
         padding: 80px;
+        @media (max-width: 650px){
+            padding: 80px 20px;
+        }
+        @media (max-width: 425px){
+            padding: 80px 10px;
+        }
         background-color: rgb(13, 7, 65);
         box-sizing: border-box;
         &_inner {
             width: 100%;
             height: auto;
             display: flex;
+            justify-content: center;
             img {
                 width: 55%;
+                @media (max-width: 768px){
+                    height: 20%;
+                }
+                @media (max-width: 650px){
+                    display: none;
+                }
             }
             &_right {
                 width: 45%;
                 display: flex;
                 flex-direction: column;
                 padding: 150px 60px;
+                @media (max-width: 768px){
+                    padding: 50px;
+                }
+                @media (max-width: 650px){
+                    width: 100%;
+                }
+                @media (max-width: 425px){
+                    padding: 20px;
+                }
                 h1 {
                     text-align: center;
                     color: white;
@@ -241,40 +308,14 @@
                         border: 1px solid white;
                     }
                 }
-                button{
+                button {
+                    width: 100%;
                     height: 50px;
                     font-size: 18px;
                     color: rgb(12, 7, 54);
-                    cursor: pointer ;
+                    cursor: pointer;
                 }
             }
-        }
-    }
-    .sixth{
-        width: 100%;
-        height: 100px;
-        background-color: rgb(13, 7, 65);
-        &_top{
-            width: 100%;
-            height: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            div{
-                width: 100px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-        &_bottom{
-            width: 100%;
-            height: 48%;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
     }
 }
