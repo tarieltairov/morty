@@ -42,7 +42,7 @@ const Home = () => {
             <div className={cl.first}>
                 <div>
                     <h1>«OrientTS» к <br /> вашим <br /> услугам</h1>
-                    <button>Связаться</button>
+                    <a href="#phone"> <button>  Связаться</button></a>
                 </div>
             </div>
 
@@ -115,12 +115,12 @@ const Home = () => {
             </div>
 
 
-            <div className={cl.fifth}>
+            <div className={cl.fifth}  >
                 <div className={cl.fifth_inner}>
                     <img src="https://static.wixstatic.com/media/94e202ff9efa4e8889fef9311cb6e0e7.jpg/v1/fill/w_490,h_775,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/94e202ff9efa4e8889fef9311cb6e0e7.jpg" alt="" />
-                    <div className={cl.fifth_inner_right}>
+                    <div className={cl.fifth_inner_right} >
                         <form action="" onSubmit={(e) => sendToServer(e)}>
-                            <h1>Свяжитесь с нами</h1>
+                            <h1 id="phone">Свяжитесь с нами</h1>
                             <label htmlFor="">Имя*</label>
                             <input value={data.name} required onChange={getValue} name='name' type="text" placeholder='Введите свое имя' />
                             <label htmlFor="">Эл.почта*</label>
